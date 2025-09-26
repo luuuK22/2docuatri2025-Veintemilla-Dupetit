@@ -6,7 +6,7 @@ public abstract class Enemy : MonoBehaviour , IDamageable
 {
     public float life;
     public float speed;
-    [SerializeField] public Transform player;
+    public Transform player;
 
 
     public delegate void EnemyDamaged(float currentLife);
@@ -15,6 +15,18 @@ public abstract class Enemy : MonoBehaviour , IDamageable
 
     public delegate void EnemyDied();
     public event EnemyDied OnEnemyDied;
+
+
+    void Awake()
+    {
+        // Busca el jugador automáticamente por su tag
+        if (player == null)
+        {
+            GameObject playerObj = GameObject.FindWithTag("Player");
+            if (playerObj != null)
+                player = playerObj.transform;
+        }
+    }
 
     public void TakeDamage(float dmg)
     {
@@ -34,7 +46,7 @@ public abstract class Enemy : MonoBehaviour , IDamageable
 
     protected virtual void FollowPlayer()
     {
-        if (player == null) player = GameObject.FindWithTag("Player").transform;
+        if(player == null) return;
         transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
     }
 
