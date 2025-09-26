@@ -3022,6 +3022,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5444353874947128712, guid: b095db53dbedf414eb54160ced5b0dff, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7271376369415935596, guid: b095db53dbedf414eb54160ced5b0dff, type: 3}
       propertyPath: healthText
       value: 
