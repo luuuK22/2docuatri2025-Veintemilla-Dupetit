@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour , IDamageable
 {
+    public float healthRemo;
     public float life;
     public float speed;
     public Transform player;
@@ -16,6 +17,11 @@ public abstract class Enemy : MonoBehaviour , IDamageable
     public delegate void EnemyDied();
     public event EnemyDied OnEnemyDied;
 
+
+    private void Start()
+    {
+        life = healthRemo;
+    }
 
     void Awake()
     {

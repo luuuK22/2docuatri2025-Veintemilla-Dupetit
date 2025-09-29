@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     
     [SerializeField] Controller controller;
     [SerializeField] float speed;
-
+   
     void Update()
     {
         Vector3 movement = controller.GetMovementInput();
@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
         }
     }
 
+  
 
 
 

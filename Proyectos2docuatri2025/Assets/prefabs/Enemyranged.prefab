@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 356577936677851560}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: shootpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 3273824258672114892}
   - component: {fileID: 6282501507171826147}
   - component: {fileID: 6480529684689473567}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemyranged
   m_TagString: Untagged
   m_Icon: {fileID: 0}

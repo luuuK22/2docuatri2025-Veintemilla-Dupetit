@@ -47,6 +47,9 @@ public class GameManager : MonoBehaviour
     {
         juegoActivo = false;
         tiempoTexto.text = "¡Victoria!";
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+
+
     }
 
     public void Pausar()

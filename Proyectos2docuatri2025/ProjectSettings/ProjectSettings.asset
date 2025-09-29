@@ -824,7 +824,13 @@ PlayerSettings:
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
   cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
     UNet: 1
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -844,10 +850,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 0ccb0013-0007-48df-a1ad-dc368224b9f2
+  cloudProjectId: b5df9e94-a742-4a65-956c-11d0d5acd8db
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Proyectos2docuatri2025
+  projectName: FoxeeGame
   organizationId: unity_c668c0a62b55eec4ba38
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

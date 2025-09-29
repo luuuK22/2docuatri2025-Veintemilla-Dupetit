@@ -7,8 +7,11 @@ public class ProyectPlayer : MonoBehaviour
     public float speed = 50f;
     private float damage = 1;
     private Vector3 direction;
+  
 
     private Rigidbody rb;
+
+   
 
     private void Awake()
     {
@@ -21,6 +24,9 @@ public class ProyectPlayer : MonoBehaviour
     }
     private void Start()
     {
+
+      
+
         Destroy(gameObject, 5f);
     }
 

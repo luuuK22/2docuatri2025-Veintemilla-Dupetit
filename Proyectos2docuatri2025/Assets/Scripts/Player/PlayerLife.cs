@@ -9,12 +9,15 @@ public class PlayerLife : MonoBehaviour, IDamageable
     public float maxHealth = 100f;
     public float currentHealth;
 
+    
+
     [SerializeField] private Text healthText;
 
     public event Action<float> OnHealthChanged;
 
     private void Start()
     {
+       
         currentHealth = maxHealth;
         OnHealthChanged += UpdateHealthText;
         NotifyHealthChange();
