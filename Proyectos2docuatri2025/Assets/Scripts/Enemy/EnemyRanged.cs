@@ -9,6 +9,7 @@ public class RangedEnemy : Enemy
     public Transform shootPoint;
     public float shootCooldown = 2f;
     private float shootTimer;
+    public float shootSpeed;
 
     public GameObject deathParticlesPrefab;
 
@@ -61,7 +62,7 @@ public class RangedEnemy : Enemy
         
         GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, shootPoint.rotation);
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
-        rb.velocity = (player.position - shootPoint.position).normalized * 50f;
+        rb.velocity = (player.position - shootPoint.position).normalized * shootSpeed;
     }
 
     void RotateTowardsPlayer()

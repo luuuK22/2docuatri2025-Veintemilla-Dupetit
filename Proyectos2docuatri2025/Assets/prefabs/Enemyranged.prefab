@@ -175,14 +175,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f19606cb6f401148939554da0579265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthRemo: 0
   life: 10
   speed: 10
   player: {fileID: 0}
   bulletPrefab: {fileID: 2223902163717058716, guid: 592bba6a02e2bf54995d8a799cf032d6, type: 3}
   shootPoint: {fileID: 356577936677851560}
   shootCooldown: 2
+  shootSpeed: 7.4
   deathParticlesPrefab: {fileID: 0}
-  stopDistance: 8
+  stopDistance: 15
   isCasting: 0
 --- !u!54 &6480529684689473567
 Rigidbody:
