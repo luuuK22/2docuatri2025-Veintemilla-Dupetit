@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
    
     void Update()
     {
+        
         Vector3 movement = controller.GetMovementInput();
 
         // Movimiento
