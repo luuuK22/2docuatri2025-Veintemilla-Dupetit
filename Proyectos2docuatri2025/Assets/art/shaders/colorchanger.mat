@@ -37,12 +37,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _fuzz: 5
+    - _fuzz: 2
     - _ismaskactive: 1
     - _range: 5
-    - _saturation: 7
+    - _saturation: 1
     - _tintiactive: 1
     m_Colors:
-    - _mask: {r: 0.8867924, g: 0.7228195, b: 0.7228195, a: 0}
-    - _tint2: {r: 0.55786645, g: 0.5660378, b: 0.5254539, a: 0}
+    - _mask: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 0}
+    - _tint2: {r: 0.9245283, g: 0.80353934, b: 0.20409395, a: 0}
   m_BuildTextureStacks: []
