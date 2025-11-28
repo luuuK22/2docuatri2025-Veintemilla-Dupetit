@@ -57,9 +57,9 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _amplitude: 0.005
-    - _cellsspeed: 2
-    - _edge1: 0.7
-    - _edge2: 0.5
+    - _cellsspeed: 2.27
+    - _edge1: 0.55
+    - _edge2: 0.51
     - _edgepower: 23.21
     - _normalscrollspeed: 3.35
     - _numberofwaves: 21.93
