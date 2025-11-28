@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 
@@ -8,7 +9,7 @@ public abstract class Enemy : MonoBehaviour , IDamageable
     public float life;
     public float speed;
     public Transform player;
-
+    public EnemyType type;
 
     public delegate void EnemyDamaged(float currentLife);
     public event EnemyDamaged OnEnemyDamaged;
@@ -58,3 +59,6 @@ public abstract class Enemy : MonoBehaviour , IDamageable
 
     protected abstract void Die();
 }
+
+
+

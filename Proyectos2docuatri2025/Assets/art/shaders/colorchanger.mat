@@ -44,5 +44,5 @@ Material:
     - _tintiactive: 1
     m_Colors:
     - _mask: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 0}
-    - _tint2: {r: 0.9245283, g: 0.80353934, b: 0.20409395, a: 0}
+    - _tint2: {r: 0.9150943, g: 0.8738789, b: 0.65955853, a: 0}
   m_BuildTextureStacks: []
