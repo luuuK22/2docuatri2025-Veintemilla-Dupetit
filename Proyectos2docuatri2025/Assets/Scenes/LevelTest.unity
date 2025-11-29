@@ -189,6 +189,7 @@ Transform:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1001 &23792672
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -357,6 +358,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
