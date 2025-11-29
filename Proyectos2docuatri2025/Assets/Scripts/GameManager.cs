@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
 
         // Asigno el botón de pausa a la función
         btnPause.onClick.AddListener(Pausar);
+
+        EventManager.Trigger(EventType.OnScoreChanged);
     }
 
     void Update()
@@ -85,7 +87,5 @@ public class GameManager : MonoBehaviour
     }
 
 }
-
-
 
 

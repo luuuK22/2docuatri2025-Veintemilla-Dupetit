@@ -3,61 +3,26 @@ using UnityEngine.SceneManagement;
 
 
 
-public abstract class Enemy : MonoBehaviour , IDamageable
+public class Enemy : MonoBehaviour
 {
-    public float healthRemo;
-    public float life;
-    public float speed;
-    public Transform player;
     public EnemyType type;
+    public int health = 30;
 
-    public delegate void EnemyDamaged(float currentLife);
-    public event EnemyDamaged OnEnemyDamaged;
-
-
-    public delegate void EnemyDied();
-    public event EnemyDied OnEnemyDied;
-
-
-    private void Start()
+    public void TakeDamage(int dmg)
     {
-        life = healthRemo;
-    }
+        health -= dmg;
 
-    void Awake()
-    {
-        // Busca el jugador automáticamente por su tag
-        if (player == null)
-        {
-            GameObject playerObj = GameObject.FindWithTag("Player");
-            if (playerObj != null)
-                player = playerObj.transform;
-        }
-    }
-
-    public void TakeDamage(float dmg)
-    {
-        life -= dmg;
-
-
-        OnEnemyDamaged?.Invoke(life);
-
-        if (life <= 0)
+        if (health <= 0)
         {
             Die();
-            
-
-            OnEnemyDied?.Invoke();
         }
     }
 
-    protected virtual void FollowPlayer()
+    void Die()
     {
-        if(player == null) return;
-        transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        EventManager.Trigger(EventType.OnEnemyDead);
+        Destroy(gameObject);
     }
-
-    protected abstract void Die();
 }
 
 
