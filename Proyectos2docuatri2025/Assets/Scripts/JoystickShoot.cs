@@ -26,7 +26,7 @@ public class JoystickShoot : MonoBehaviour, IDragHandler, IEndDragHandler
         if (shootDir.magnitude > 0.1f && weapon != null)
         {
             Vector3 dir = new Vector3(shootDir.x, 0, shootDir.y).normalized;
-            weapon.Shoot(dir); // Asegúrate que tu método Shoot acepte una dirección
+            //weapon.Shoot(dir); // Asegúrate que tu método Shoot acepte una dirección
         }
     }
 

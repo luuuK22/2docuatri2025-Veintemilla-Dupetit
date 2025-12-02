@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 
 
-public class Enemy : MonoBehaviour
+public abstract class Enemy : MonoBehaviour
 {
     public EnemyType type;
     public int health = 30;
