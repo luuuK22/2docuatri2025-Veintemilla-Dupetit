@@ -8,7 +8,7 @@ public class JoystickShoot : MonoBehaviour, IDragHandler, IEndDragHandler
     
     Vector3 initialPosition;
     [SerializeField] float maxMagnitude = 75;
-    public Weapon weapon; // Asigna el arma desde el inspector
+    public Weapon weapon; 
 
     Vector3 shootDir;
 
@@ -22,11 +22,11 @@ public class JoystickShoot : MonoBehaviour, IDragHandler, IEndDragHandler
         shootDir = Vector3.ClampMagnitude((Vector3)eventData.position - initialPosition, maxMagnitude);
         transform.position = initialPosition + shootDir;
 
-        // Si el stick se mueve, dispara en esa dirección
+      
         if (shootDir.magnitude > 0.1f && weapon != null)
         {
             Vector3 dir = new Vector3(shootDir.x, 0, shootDir.y).normalized;
-            //weapon.Shoot(dir); // Asegúrate que tu método Shoot acepte una dirección
+           
         }
     }
 

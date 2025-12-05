@@ -47,17 +47,17 @@ public class WaterCannon : MonoBehaviour
     {
         line.enabled = true;
 
-        // Dirección del rayo según joystick
+   
         Vector3 dir = new Vector3(aim.x, 0, aim.y).normalized;
 
         Vector3 start = handPoint.position;
         Vector3 end = start + dir * range;
 
-        // Dibujar línea
+      
         line.SetPosition(0, start);
         line.SetPosition(1, end);
 
-        // Hacer daño a enemigos
+        
         Ray ray = new Ray(start, dir);
         RaycastHit hit;
 

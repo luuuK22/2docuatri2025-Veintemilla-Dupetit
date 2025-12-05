@@ -46,9 +46,7 @@ public class MainMenuUI : MonoBehaviour
         levelSelectPanel.SetActive(false);
     }
 
-    // ---------------------------------------------------------
-    // NUEVO: ZOOM HACIA EL LOOP EXTERNO (MISMA ESCENA)
-    // ---------------------------------------------------------
+   
     public void OnPlayPressed()
     {
         if (!isZooming)
@@ -78,7 +76,7 @@ public class MainMenuUI : MonoBehaviour
             yield return null;
         }
 
-        // Después del zoom → ACTIVAR EL LOOP EXTERNO
+      
         isZooming = false;
         menuPanel.SetActive(false);
         levelSelectPanel.SetActive(true);

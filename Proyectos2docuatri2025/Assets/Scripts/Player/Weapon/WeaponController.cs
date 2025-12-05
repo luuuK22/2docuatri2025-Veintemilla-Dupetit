@@ -14,13 +14,10 @@ public class WeaponController : MonoBehaviour
 
     private void Start()
     {
-        // Por defecto podés iniciar con un arma
+        
         EquipFireSword();
     }
 
-    // -----------------------------------------------------
-    //  Equipamientos
-    // -----------------------------------------------------
 
     public void EquipFireSword()
     {
@@ -43,9 +40,7 @@ public class WeaponController : MonoBehaviour
         Debug.Log("Equipped Water Cannon");
     }
 
-    // -----------------------------------------------------
-    //  Activar / Desactivar poderes
-    // -----------------------------------------------------
+
     private void EnableWeapon(string type)
     {
         fireSword.enabled = (type == "Sword");

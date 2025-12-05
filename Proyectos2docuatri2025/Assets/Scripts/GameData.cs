@@ -5,14 +5,14 @@ using UnityEngine;
 public static class GameData
 {
    
-    // ---- Currency ----
+
     public static int Coins
     {
         get => PlayerPrefs.GetInt("Coins", 0);
         set => PlayerPrefs.SetInt("Coins", value);
     }
 
-    // ---- Stamina ----
+ 
     public static int MaxStamina => 5;
 
     public static int CurrentStamina
@@ -31,7 +31,7 @@ public static class GameData
         PlayerPrefs.SetString(LastStaminaTimeKey, System.DateTime.Now.ToString());
     }
 
-    // Llamar al abrir el juego / volver al menú
+
     public static void RegenerateStamina(int minutesPerPoint = 10)
     {
         if (!PlayerPrefs.HasKey(LastStaminaTimeKey)) return;
@@ -46,7 +46,7 @@ public static class GameData
         PlayerPrefs.SetString(LastStaminaTimeKey, System.DateTime.Now.ToString());
     }
 
-    // ---- Audio ----
+ 
     public static float MasterVolume
     {
         get => PlayerPrefs.GetFloat("MasterVolume", 1f);
@@ -57,10 +57,9 @@ public static class GameData
         }
     }
 
-    // ---- Progreso / otros flags ----
+
     
 
-    // Items comprados
     public static bool SkinFoxRed
     {
         get => PlayerPrefs.GetInt("SkinFoxRed", 0) == 1;
@@ -73,7 +72,7 @@ public static class GameData
         set => PlayerPrefs.SetInt("ExtraDamage", value ? 1 : 0);
     }
 
-    // Borrar todo
+    
     public static void ResetAll()
     {
         PlayerPrefs.DeleteAll();
