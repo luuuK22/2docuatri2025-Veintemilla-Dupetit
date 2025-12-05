@@ -1490,7 +1490,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &362298024
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2544,7 +2544,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1554988991}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Pausar
+        m_MethodName: TogglePause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2987,7 +2987,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1554988991}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Reanudar
+        m_MethodName: TogglePause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4627,7 +4627,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1554988991}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Menu
+        m_MethodName: BotonSalirAlMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8202,6 +8202,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2880699649815235153, guid: b088e8ab2420bcf4f8d80198fe0b3fce, type: 3}
   m_PrefabInstance: {fileID: 1919790562}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1939897077 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4465267640087440865, guid: b095db53dbedf414eb54160ced5b0dff, type: 3}
+  m_PrefabInstance: {fileID: 3867446058226097964}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1945897826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8680,9 +8685,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 343681865328881959, guid: b095db53dbedf414eb54160ced5b0dff, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 343681865328881959, guid: b095db53dbedf414eb54160ced5b0dff, type: 3}
       propertyPath: controller
       value: 
-      objectReference: {fileID: 688119293}
+      objectReference: {fileID: 7021778095512094874}
     - target: {fileID: 1686037193127699331, guid: b095db53dbedf414eb54160ced5b0dff, type: 3}
       propertyPath: aimJoystick
       value: 
@@ -8727,14 +8736,17 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 6475146854356802490, guid: b095db53dbedf414eb54160ced5b0dff, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4465267640087440865, guid: b095db53dbedf414eb54160ced5b0dff, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 7021778095512094874}
   m_SourcePrefab: {fileID: 100100000, guid: b095db53dbedf414eb54160ced5b0dff, type: 3}
 --- !u!114 &3867446058226097965 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8064632515607805242, guid: b095db53dbedf414eb54160ced5b0dff, type: 3}
   m_PrefabInstance: {fileID: 3867446058226097964}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1939897077}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e8498b908fa9e64690c8dd02b14a025, type: 3}
@@ -8745,6 +8757,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 254700077238492925, guid: b095db53dbedf414eb54160ced5b0dff, type: 3}
   m_PrefabInstance: {fileID: 3867446058226097964}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7021778095512094874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939897077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1048e9700f2a3664bbfb384ae6c21290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joystick: {fileID: 688119293}
 --- !u!4 &8167389797921763948 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2880699649815235153, guid: b088e8ab2420bcf4f8d80198fe0b3fce, type: 3}

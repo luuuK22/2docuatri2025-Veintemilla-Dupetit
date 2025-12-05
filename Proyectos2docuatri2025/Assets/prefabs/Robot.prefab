@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  rotationSpeed: 6
+  rotationSpeed: 1
 --- !u!114 &5645353909617551045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 2
-  health: 50
+  health: 1
   factory: {fileID: 11400000, guid: fb4a399bee63c804f8e8dd0b445e9daf, type: 2}
   damage: 8
   attackCooldown: 1

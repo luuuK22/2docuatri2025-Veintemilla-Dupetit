@@ -120,6 +120,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapon: {fileID: 0}
   direction: {x: 0, y: 0, z: 0}
-  speed: 0
+  speed: 1
   lifeTime: 0.38
   impactRadius: 2.07
