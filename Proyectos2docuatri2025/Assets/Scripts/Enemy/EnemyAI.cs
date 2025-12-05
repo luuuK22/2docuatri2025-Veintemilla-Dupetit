@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
+
     private Transform player;
     public float speed = 2f;
     public float rotationSpeed = 6f;
@@ -20,11 +21,11 @@ public class EnemyAI : MonoBehaviour
         if (player == null)
             return;
 
-       
-        Vector3 lookDir = player.position - transform.position;
-        lookDir.y = 0;
-
         
+        Vector3 lookDir = player.position - transform.position;
+        lookDir.y = 0;  
+
+      
         if (lookDir.sqrMagnitude > 0.01f)
         {
             Quaternion targetRot = Quaternion.LookRotation(lookDir);
@@ -35,10 +36,12 @@ public class EnemyAI : MonoBehaviour
             );
         }
 
-      
+       
         float dist = lookDir.magnitude;
-        if (dist > 0.5f)
-            transform.position += transform.forward * speed * Time.deltaTime;
+        if (dist > 0.5f) 
+        {
+            transform.position += transform.forward * speed * Time.deltaTime; 
+        }
     }
 
 }
