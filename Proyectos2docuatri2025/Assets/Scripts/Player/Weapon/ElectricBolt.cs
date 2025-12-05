@@ -9,9 +9,10 @@ public class ElectricBolt : MonoBehaviour
     public float speed = 20f;
     public float lifeTime = 1.2f;
     public float impactRadius = 1f;
-
+    public AudioSource shock;
     private void Start()
     {
+        shock.Play();
         Destroy(gameObject, lifeTime);
     }
 

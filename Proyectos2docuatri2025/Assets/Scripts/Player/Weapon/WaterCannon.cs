@@ -9,6 +9,7 @@ public class WaterCannon : MonoBehaviour
     [SerializeField] private JoystickScript aimJoystick;
     [SerializeField] private float range = 15f;
     [SerializeField] private float tickRate = 0.1f;
+    public AudioSource waterSound;
 
     private Weapon weapon;
     private float timer;
@@ -21,30 +22,43 @@ public class WaterCannon : MonoBehaviour
 
     void Update()
     {
-        // Lectura del joystick
         Vector3 joy3D = aimJoystick.GetMovementInput();
         Vector2 aim = new Vector2(joy3D.x, joy3D.z);
 
-        // Si no está apuntando, apagamos el beam
         if (aim.magnitude < 0.2f)
         {
             line.enabled = false;
+            StopSound();
             return;
         }
 
-        // Botón de ataque presionado
         if (Input.GetMouseButton(0))
         {
+            PlaySound();
             Fire(aim);
         }
         else
         {
             line.enabled = false;
+            StopSound();
         }
+    }
+
+    private void PlaySound()
+    {
+        if (!waterSound.isPlaying)
+            waterSound.Play();
+    }
+
+    private void StopSound()
+    {
+        if (waterSound.isPlaying)
+            waterSound.Stop();
     }
 
     private void Fire(Vector2 aim)
     {
+        
         line.enabled = true;
 
    
@@ -75,6 +89,7 @@ public class WaterCannon : MonoBehaviour
                 if (timer <= 0)
                 {
                     weapon.Attack(e);
+                    
                     timer = tickRate;
                 }
             }

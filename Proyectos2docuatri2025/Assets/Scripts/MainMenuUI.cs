@@ -33,6 +33,19 @@ public class MainMenuUI : MonoBehaviour
         menuPanel.SetActive(true);
     }
 
+    public void OpenOption()
+    {
+       
+       
+        optionsPanel.SetActive(true);
+    }
+    public void CloseOption()
+    {
+       
+       
+        optionsPanel.SetActive(false);
+    }
+
     private void UpdateHeader()
     {
         coinsText.text = $"Monedas: {GameData.Coins}";

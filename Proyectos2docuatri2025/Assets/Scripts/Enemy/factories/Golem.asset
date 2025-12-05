@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2bd454fa32730b41aa3c1470e14b4ea, type: 3}
   m_Name: Golem
   m_EditorClassIdentifier: 
-  prefab: {fileID: 7932832165259195770, guid: 3edbf7d62d241924eb30af0800989ffc, type: 3}
+  prefab: {fileID: 5645353909617551045, guid: f1b88043ae7ba2f45a3993a6643f39cd, type: 3}

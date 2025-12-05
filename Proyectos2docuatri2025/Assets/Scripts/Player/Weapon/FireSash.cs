@@ -6,7 +6,8 @@ public class FireSash : MonoBehaviour
 {
     public Weapon weapon;         
     public float speed = 10f;      
-    public float lifeTime = 0.4f;   
+    public float lifeTime = 0.4f;
+    public AudioSource fire;
 
     private Vector3 direction;
 
@@ -15,6 +16,7 @@ public class FireSash : MonoBehaviour
       
         direction = transform.forward;
         Destroy(gameObject, lifeTime);
+        fire.Play();
     }
 
     void Update()
