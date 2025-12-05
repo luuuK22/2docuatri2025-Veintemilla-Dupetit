@@ -8687,6 +8687,10 @@ PrefabInstance:
       propertyPath: aimJoystick
       value: 
       objectReference: {fileID: 1746200498}
+    - target: {fileID: 2552295656506174120, guid: b095db53dbedf414eb54160ced5b0dff, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e3ad4f3d9cf231845b14916c32fb604c, type: 2}
     - target: {fileID: 3980707994201731343, guid: b095db53dbedf414eb54160ced5b0dff, type: 3}
       propertyPath: aimJoystick
       value: 
@@ -8707,8 +8711,21 @@ PrefabInstance:
       propertyPath: aimJoystick
       value: 
       objectReference: {fileID: 1746200498}
+    - target: {fileID: 9215301529332955649, guid: b095db53dbedf414eb54160ced5b0dff, type: 3}
+      propertyPath: m_Radius
+      value: 2.7259681
+      objectReference: {fileID: 0}
+    - target: {fileID: 9215301529332955649, guid: b095db53dbedf414eb54160ced5b0dff, type: 3}
+      propertyPath: m_Center.x
+      value: 0.097809084
+      objectReference: {fileID: 0}
+    - target: {fileID: 9215301529332955649, guid: b095db53dbedf414eb54160ced5b0dff, type: 3}
+      propertyPath: m_Center.z
+      value: -0.70611894
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6475146854356802490, guid: b095db53dbedf414eb54160ced5b0dff, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b095db53dbedf414eb54160ced5b0dff, type: 3}

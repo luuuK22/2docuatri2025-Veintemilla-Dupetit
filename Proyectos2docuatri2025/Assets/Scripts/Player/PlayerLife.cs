@@ -48,19 +48,9 @@ public class PlayerLife : MonoBehaviour, IDamageable
             healthText.text = $"Vida: {health:0}";
     }
 
-    private void Update()
-    {
-        Die();
-    }
+    
 
-    private void Die()
-    {
-        if (currentHealth <= 0f)
-        {
-            SceneManager.LoadScene("Menu");
-            Debug.Log("Mori");
-        }
-    }
+    
 
   
 }

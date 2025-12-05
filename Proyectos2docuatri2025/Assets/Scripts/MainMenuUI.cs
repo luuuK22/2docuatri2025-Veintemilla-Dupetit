@@ -79,8 +79,8 @@ public class MainMenuUI : MonoBehaviour
         }
 
         // Después del zoom → ACTIVAR EL LOOP EXTERNO
+        isZooming = false;
         menuPanel.SetActive(false);
-        shopPanel.SetActive(false);
         levelSelectPanel.SetActive(true);
     }
 
@@ -90,37 +90,39 @@ public class MainMenuUI : MonoBehaviour
         Application.Quit();
 
     }
+    public void OpenShop()
+    {
+        levelSelectPanel.SetActive(false);
+        menuPanel.SetActive(false);
+        shopPanel.SetActive(true);
+    }
 
-
-
+    public void GoToscene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }   
 
     public void BackToMainMenu()
     {
-        // Mostrar panel principal
+      
         menuPanel.SetActive(true);
 
-        // Ocultar loop externo
+       
         shopPanel.SetActive(false);
         levelSelectPanel.SetActive(false);
 
-        // Opcional: reestablecer cámara al punto original
-        // si querés que la cámara vuelva suavemente, activá la corrutina siguiente:
+        
         StartCoroutine(ZoomBack());
     }
 
-    // Si querés que la cámara vuelva automáticamente al menú:
-    // Creamos la corrutina ZoomBack()
+  
     private IEnumerator ZoomBack()
     {
         Vector3 startPos = menuCamera.transform.position;
         Quaternion startRot = menuCamera.transform.rotation;
 
-        // Guardaste esta posición ANTES? Si no, creá un Empty "CameraStart"
-        // y asignalo igual que zoomTarget.
-        Transform startTarget = cameraStartPoint; // <<< debes agregarlo en el inspector
-
-        Vector3 endPos = startTarget.position;
-        Quaternion endRot = startTarget.rotation;
+        Vector3 endPos = cameraStartPoint.position;
+        Quaternion endRot = cameraStartPoint.rotation;
 
         float t = 0f;
 
@@ -134,5 +136,7 @@ public class MainMenuUI : MonoBehaviour
 
             yield return null;
         }
+
+        isZooming = false;
     }
 }
