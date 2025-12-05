@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public PlayerLife life;
+
     [Header("UI")]
     [SerializeField] private Text tiempoTexto;
     [SerializeField] private GameObject panelPausa;
@@ -42,6 +44,8 @@ public class GameManager : MonoBehaviour
 
        
         tiempoTexto.text = "Tiempo: " + tiempoActual.ToString("F1");
+
+        if (life.currentHealth <= 0) { GameOver();}
     }
 
    
@@ -77,6 +81,8 @@ public class GameManager : MonoBehaviour
         panelGameOver.SetActive(true);
         textoResultado.text = $"Sobreviviste {tiempoActual:F1} segundos";
         textoMonedas.text = $"+{reward} monedas";
+
+        Time.timeScale = 0f;
     }
 
     private int CalcularReward()
@@ -84,6 +90,8 @@ public class GameManager : MonoBehaviour
         
         return Mathf.FloorToInt(tiempoActual / 3f);
     }
+
+    
 
  
 
