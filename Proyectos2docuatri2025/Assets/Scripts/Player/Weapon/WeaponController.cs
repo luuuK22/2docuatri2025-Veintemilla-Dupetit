@@ -4,42 +4,52 @@ using UnityEngine;
 
 public class WeaponController : MonoBehaviour
 {
-    public Weapon weapon;
+    [Header("Referencia al script Weapon base")]
+    [SerializeField] private Weapon weapon;
 
-    public void EquipWaterCannon()
+    [Header("Habilidades del zorro (scripts de poderes)")]
+    [SerializeField] private FireSword fireSword;
+    [SerializeField] private ElectricStaff electricStaff;
+    [SerializeField] private WaterCannon waterCannon;
+
+    private void Start()
     {
-        weapon.strategy = new WaterCannonStrat();
+        // Por defecto podés iniciar con un arma
+        EquipFireSword();
     }
+
+    // -----------------------------------------------------
+    //  Equipamientos
+    // -----------------------------------------------------
 
     public void EquipFireSword()
     {
         weapon.strategy = new FireSwordStrat();
+        EnableWeapon("Sword");
+        Debug.Log("Equipped Fire Sword");
     }
 
-    public void EquipBlowgun()
+    public void EquipElectricStaff()
     {
         weapon.strategy = new ElectricStaffStrat();
+        EnableWeapon("Electric");
+        Debug.Log("Equipped Electric Staff");
     }
 
-    void Update()
+    public void EquipWaterCannon()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            ShootRay();
-        }
+        weapon.strategy = new WaterCannonStrat();
+        EnableWeapon("Water");
+        Debug.Log("Equipped Water Cannon");
     }
 
-    void ShootRay()
+    // -----------------------------------------------------
+    //  Activar / Desactivar poderes
+    // -----------------------------------------------------
+    private void EnableWeapon(string type)
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        if (Physics.Raycast(ray, out RaycastHit hit))
-        {
-            Enemy e = hit.collider.GetComponent<Enemy>();
-            if (e != null)
-            {
-                weapon.Attack(e);
-            }
-        }
+        fireSword.enabled = (type == "Sword");
+        electricStaff.enabled = (type == "Electric");
+        waterCannon.enabled = (type == "Water");
     }
 }

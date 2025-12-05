@@ -5,14 +5,15 @@ using UnityEngine;
 
 [CreateAssetMenu(menuName = "Factories/PoisonFactory")]
 
-public class PoisonFactory : EnemyFac
+public class PoisonFactory : EnemyFactory
 {
-    public Enemy prefab;
+    [SerializeField] private Enemy prefab;
 
-    public  Enemy CreateEnemy(Vector3 pos)
+    public override Enemy CreateEnemy(Vector3 pos)
     {
         return Instantiate(prefab, pos, Quaternion.identity);
     }
 }
+
 
 

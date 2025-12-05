@@ -4,8 +4,8 @@ using UnityEngine;
 
 public enum EnemyType
 {
-    Robot,
-    IceGolem,
-    PoisonSlime,
-
+    PoisonSlime,   // Slime que se divide
+    IceGolem,      // Golem tanque
+    Robot          // Robot rápido o de rango
 }
+

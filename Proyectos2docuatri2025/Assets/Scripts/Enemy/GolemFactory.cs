@@ -4,14 +4,18 @@ using UnityEngine;
 
 
 [CreateAssetMenu(menuName = "Factories/GolemFactory")]
-public class GolemFactory : EnemyFac
+public class GolemFactory : EnemyFactory
 {
- 
-    public Enemy prefab;
 
-    public  Enemy CreateEnemy(Vector3 pos)
+    [SerializeField] private Enemy prefab;
+
+    public override Enemy CreateEnemy(Vector3 pos)
     {
         return Instantiate(prefab, pos, Quaternion.identity);
     }
 }
+
+
+
+
 

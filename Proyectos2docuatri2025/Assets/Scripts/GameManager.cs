@@ -1,89 +1,102 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
-    [Header("Tiempo")]
-    public float tiempoObjetivo = 60f;
-    public Text tiempoTexto;
+    public static GameManager Instance;
 
     [Header("UI")]
-    public GameObject menuPausa;
-    public Button btnPause; // asignalo desde el Canvas
+    [SerializeField] private Text tiempoTexto;
+    [SerializeField] private GameObject panelPausa;
+    [SerializeField] private GameObject panelGameOver;
+    [SerializeField] private Text textoResultado;
+    [SerializeField] private Text textoMonedas;
 
+    [Header("Estado del Juego")]
+    public bool juegoActivo = false;
+    public bool enPausa = false;
 
-    private float tiempoActual;
-    private bool juegoActivo = true;
-    private bool enPausa = false;
+    private float tiempoActual = 0f;
 
-    void Start()
+    private void Awake()
     {
-        tiempoActual = 0f;
-        menuPausa.SetActive(false);
-
-        // Asigno el botón de pausa a la función
-        btnPause.onClick.AddListener(Pausar);
-
-        EventManager.Trigger(EventType.OnScoreChanged);
+        Instance = this;
     }
 
-    void Update()
+    private void Start()
+    {
+        juegoActivo = true;
+        panelPausa.SetActive(false);
+        panelGameOver.SetActive(false);
+    }
+
+    private void Update()
     {
         if (!juegoActivo || enPausa) return;
 
         
         tiempoActual += Time.deltaTime;
-        float tiempoRestante = Mathf.Max(tiempoObjetivo - tiempoActual, 0f);
-        tiempoTexto.text = "Tiempo: " + tiempoRestante.ToString("F1");
 
-        if (tiempoActual >= tiempoObjetivo)
+       
+        tiempoTexto.text = "Tiempo: " + tiempoActual.ToString("F1");
+    }
+
+   
+
+    public void TogglePause()
+    {
+        enPausa = !enPausa;
+
+        if (enPausa)
         {
-            Ganar();
+            panelPausa.SetActive(true);
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            panelPausa.SetActive(false);
+            Time.timeScale = 1f;
         }
     }
 
-    void Ganar()
+    
+    public void GameOver()
     {
         juegoActivo = false;
-        tiempoTexto.text = "¡Victoria!";
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+        Time.timeScale = 1f; 
 
+        int reward = CalcularReward();
 
+       
+        GameData.Coins += reward;
+
+        
+        panelGameOver.SetActive(true);
+        textoResultado.text = $"Sobreviviste {tiempoActual:F1} segundos";
+        textoMonedas.text = $"+{reward} monedas";
     }
 
-    public void Pausar()
+    private int CalcularReward()
     {
-        enPausa = true;
-        Time.timeScale = 0f;
-        menuPausa.SetActive(true);
+        
+        return Mathf.FloorToInt(tiempoActual / 3f);
     }
 
-    public void Reanudar()
-    {
-        enPausa = false;
-        Time.timeScale = 1f;
-        menuPausa.SetActive(false);
-    }
-    public void Reiniciar()
-    {
-        Time.timeScale = 1f;
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
-    }
+ 
 
-    
-    public void Menu()
+    public void BotonReintentar()
     {
         Time.timeScale = 1f;
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-
-    public void Salir()
+    public void BotonSalirAlMenu()
     {
-        Application.Quit();
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Home");
     }
 
 }

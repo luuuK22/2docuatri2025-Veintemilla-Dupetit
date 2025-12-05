@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2195979097538826407}
   - component: {fileID: 8632260809163248625}
   - component: {fileID: 2617927622639346154}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Y-
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 3023294014371673275}
   - component: {fileID: 7645741729071255805}
   - component: {fileID: 5941630231661628982}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Ballmesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 67195323353199935}
   - component: {fileID: 8381377064697706603}
   - component: {fileID: 7048416154215426075}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Y+
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,7 +287,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1493162362307817178}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Z+_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -318,7 +318,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7569038119690069938}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: X+_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -357,7 +357,7 @@ GameObject:
   - component: {fileID: 5880263237800492564}
   - component: {fileID: 2898539043286476015}
   - component: {fileID: 1863448186421128605}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: ballarmat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -446,7 +446,7 @@ SpringJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0.0000000010989607, y: -0.0050000004, z: 5.9604643e-10}
   serializedVersion: 2
-  m_Spring: 10
+  m_Spring: 50
   m_Damper: 0.2
   m_MinDistance: 0
   m_MaxDistance: 0
@@ -470,7 +470,7 @@ SpringJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 4.656614e-10, y: -0.005, z: 5.4637583e-10}
   serializedVersion: 2
-  m_Spring: 10
+  m_Spring: 50
   m_Damper: 0.2
   m_MinDistance: 0
   m_MaxDistance: 0
@@ -494,7 +494,7 @@ SpringJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: -0.005, z: -5.463759e-10}
   serializedVersion: 2
-  m_Spring: 10
+  m_Spring: 50
   m_Damper: 0.2
   m_MinDistance: 0
   m_MaxDistance: 0
@@ -518,7 +518,7 @@ SpringJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 2.980232e-10, y: -0.0050000004, z: 7.54979e-10}
   serializedVersion: 2
-  m_Spring: 10
+  m_Spring: 50
   m_Damper: 0.2
   m_MinDistance: 0
   m_MaxDistance: 0
@@ -542,7 +542,7 @@ SpringJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: -0.0039999997, z: 4.656613e-10}
   serializedVersion: 2
-  m_Spring: 10
+  m_Spring: 50
   m_Damper: 0.2
   m_MinDistance: 0
   m_MaxDistance: 0
@@ -566,7 +566,7 @@ SpringJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: -0.0049999994, z: -0.0000000013969839}
   serializedVersion: 2
-  m_Spring: 10
+  m_Spring: 50
   m_Damper: 0.2
   m_MinDistance: 0
   m_MaxDistance: 0
@@ -588,7 +588,7 @@ GameObject:
   - component: {fileID: 243345957956927777}
   - component: {fileID: 5554794527296016278}
   - component: {fileID: 7716209626806140240}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: X-
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -670,7 +670,7 @@ GameObject:
   - component: {fileID: 772749555175918456}
   - component: {fileID: 4022296716635607511}
   - component: {fileID: 8768690770910016186}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Z+
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -752,7 +752,7 @@ GameObject:
   - component: {fileID: 3390364270326226789}
   - component: {fileID: 7471756722418302979}
   - component: {fileID: 9166926381586595055}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: X+
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -832,7 +832,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5366959335097426241}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Y-_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -863,7 +863,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6027809346286287644}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Y+_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -894,7 +894,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5934212577522617824}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Z-_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -927,7 +927,7 @@ GameObject:
   - component: {fileID: 8900292551542908200}
   - component: {fileID: 8124514688732067167}
   - component: {fileID: 3736626300044178549}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Z-
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1007,7 +1007,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8056396439417114031}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: X-_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1038,10 +1038,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3996487147004803963}
-  - component: {fileID: 1567317418233559440}
   - component: {fileID: 7907739668256430100}
   - component: {fileID: 4158673085879238386}
-  m_Layer: 9
+  - component: {fileID: 8276033678249957808}
+  m_Layer: 0
   m_Name: PoisonSlime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1065,27 +1065,6 @@ Transform:
   - {fileID: 3023294014371673275}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1567317418233559440
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8508087558847906309}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 5786d06354ae74b44af551909a1041c0, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &7907739668256430100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1099,6 +1078,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  rotationSpeed: 6
 --- !u!114 &4158673085879238386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1111,3 +1091,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab3083720eee51e40bebe573d4663cf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
+  health: 50
+  factory: {fileID: 11400000, guid: 6d0e9aac3770d1840b93e0e8c53993d3, type: 2}
+  miniHealth: 4
+  damage: 5
+  attackCooldown: 1
+--- !u!65 &8276033678249957808
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8508087558847906309}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.6575022, y: 3.276949, z: 3.1464572}
+  m_Center: {x: 0.17356253, y: 0.030440807, z: -0.030378103}

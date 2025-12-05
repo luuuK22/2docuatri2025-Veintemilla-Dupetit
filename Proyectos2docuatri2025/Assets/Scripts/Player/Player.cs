@@ -4,26 +4,30 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    
-    [SerializeField] Controller controller;
-    [SerializeField] float speed;
-   
+
+    [SerializeField] private Controller controller;
+
+    [Header("Movement Settings")]
+    public float speed = 5f;
+
+    private Vector3 moveDir;
+
     void Update()
     {
-        Vector3 movement = controller.GetMovementInput();
+        moveDir = controller.GetMovementInput();
 
         // Movimiento
-        transform.position += movement * speed * Time.deltaTime;
-
-        // Rotación hacia la dirección de movimiento (si hay movimiento)
-        if (movement != Vector3.zero)
+        if (moveDir != Vector3.zero)
         {
-            transform.rotation = Quaternion.LookRotation(movement);
+            transform.position += moveDir * speed * Time.deltaTime;
+            transform.rotation = Quaternion.LookRotation(moveDir);
         }
     }
 
-  
-
+    public void SetSpeedMultiplier(float multiplier)
+    {
+        speed *= multiplier;
+    }
 
 
 }
